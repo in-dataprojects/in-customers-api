@@ -3,9 +3,9 @@
   "entities" : [ {
     "entity" : {
       "type" : "Project",
-      "name" : "Customers API 2.0.1",
+      "name" : "Customers API 1.0.0",
       "description" : "No description",
-      "importedFrom" : "85c548fd-562e-4871-bd1f-c606fd92a4d3"
+      "importedFrom" : "adaa8151-92f3-4c72-a743-41fe03796614"
     },
     "children" : [ {
       "entity" : {
@@ -20,24 +20,12 @@
       "children" : [ {
         "entity" : {
           "type" : "Request",
-          "id" : "0be53fba-10ff-4b3a-8b42-8f5bebf521fd",
+          "id" : "cc7f761d-b8f8-4638-94f2-9c403013c2f9",
           "name" : "Get the list of customers",
           "description" : "Loads the list of customers",
           "uri" : {
             "host" : "${\"BaseUrl\"}",
-            "path" : "/customers",
-            "query" : {
-              "delimiter" : "&",
-              "items" : [ {
-                "name" : "start",
-                "value" : "",
-                "enabled" : true
-              }, {
-                "name" : "pageSize",
-                "value" : "",
-                "enabled" : true
-              } ]
-            }
+            "path" : "/customers"
           },
           "method" : {
             "link" : "",
@@ -48,13 +36,12 @@
             "name" : "Accept",
             "value" : "application/json"
           } ],
-          "headersType" : "Form",
-          "uriEditor" : true
+          "headersType" : "Form"
         }
       }, {
         "entity" : {
           "type" : "Request",
-          "id" : "4fd21636-2361-43f1-97d1-ccad80afcc79",
+          "id" : "ddd7ba1d-0237-44d5-af3e-9e70c3213cd5",
           "name" : "Create a customer",
           "description" : "adds a new customer",
           "uri" : {
@@ -84,7 +71,7 @@
       }, {
         "entity" : {
           "type" : "Request",
-          "id" : "2c51fc4a-9cd7-4ef7-9ee2-d434c9294fda",
+          "id" : "9e712673-6c85-4b76-a32b-ff691d96f3e9",
           "name" : "Update a customer",
           "description" : "Updates a customer",
           "uri" : {
@@ -114,7 +101,7 @@
       }, {
         "entity" : {
           "type" : "Request",
-          "id" : "3b17eca9-f3ef-4e06-8c10-7d074361e970",
+          "id" : "dcc4d436-d070-44af-b639-a1efe7d96444",
           "name" : "Delete a customer",
           "description" : "Deletes a customer",
           "uri" : {
@@ -137,12 +124,12 @@
     } ]
   } ],
   "environments" : [ {
-    "name" : "Customers API 2.0.1",
+    "name" : "Customers API 1.0.0",
     "importedFrom" : {
-      "projectId" : "85c548fd-562e-4871-bd1f-c606fd92a4d3"
+      "projectId" : "adaa8151-92f3-4c72-a743-41fe03796614"
     },
     "variables" : {
-      "1c13a69e-7399-4fa7-984c-2ebbde0d893e" : {
+      "e9358f37-a1b7-49c7-85f6-4b5683a275e2" : {
         "name" : "BaseUrl",
         "value" : "https://example.com",
         "enabled" : true,
