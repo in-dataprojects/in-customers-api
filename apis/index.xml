@@ -7,12 +7,5 @@
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="/apis/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>/apis/customers-api/2.0.1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/apis/customers-api/2.0.1/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>
