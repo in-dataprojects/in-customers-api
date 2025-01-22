@@ -3,9 +3,9 @@
   "entities" : [ {
     "entity" : {
       "type" : "Project",
-      "name" : "Customers API 1.1.0",
-      "description" : "An API for keeping track of your customers.",
-      "importedFrom" : "68d10d7d-624c-4102-9437-294743aa6384"
+      "name" : "Customers API 2.0.1",
+      "description" : "No description",
+      "importedFrom" : "85c548fd-562e-4871-bd1f-c606fd92a4d3"
     },
     "children" : [ {
       "entity" : {
@@ -20,12 +20,24 @@
       "children" : [ {
         "entity" : {
           "type" : "Request",
-          "id" : "c23c4572-8375-4687-8267-81f9a0631b3d",
+          "id" : "0be53fba-10ff-4b3a-8b42-8f5bebf521fd",
           "name" : "Get the list of customers",
           "description" : "Loads the list of customers",
           "uri" : {
             "host" : "${\"BaseUrl\"}",
-            "path" : "/customers"
+            "path" : "/customers",
+            "query" : {
+              "delimiter" : "&",
+              "items" : [ {
+                "name" : "start",
+                "value" : "",
+                "enabled" : true
+              }, {
+                "name" : "pageSize",
+                "value" : "",
+                "enabled" : true
+              } ]
+            }
           },
           "method" : {
             "link" : "",
@@ -36,14 +48,15 @@
             "name" : "Accept",
             "value" : "application/json"
           } ],
-          "headersType" : "Form"
+          "headersType" : "Form",
+          "uriEditor" : true
         }
       }, {
         "entity" : {
           "type" : "Request",
-          "id" : "06d754ee-5ff7-4109-b621-ba36dab0919f",
+          "id" : "4fd21636-2361-43f1-97d1-ccad80afcc79",
           "name" : "Create a customer",
-          "description" : "Adds a new customer",
+          "description" : "adds a new customer",
           "uri" : {
             "host" : "${\"BaseUrl\"}",
             "path" : "/customers"
@@ -71,26 +84,9 @@
       }, {
         "entity" : {
           "type" : "Request",
-          "id" : "256fd533-55a8-42ea-9c69-2a62170f57b9",
-          "name" : "Delete a customer",
-          "description" : "Delete a customer",
-          "uri" : {
-            "host" : "${\"BaseUrl\"}",
-            "path" : "/customers/{id}"
-          },
-          "method" : {
-            "link" : "",
-            "name" : "DELETE"
-          },
-          "headers" : [ ],
-          "headersType" : "Form"
-        }
-      }, {
-        "entity" : {
-          "type" : "Request",
-          "id" : "6f84c01b-7cab-4c59-9301-30c669a677dc",
+          "id" : "2c51fc4a-9cd7-4ef7-9ee2-d434c9294fda",
           "name" : "Update a customer",
-          "description" : "Updates a customer.",
+          "description" : "Updates a customer",
           "uri" : {
             "host" : "${\"BaseUrl\"}",
             "path" : "/customers/{id}"
@@ -115,6 +111,23 @@
             "textBody" : "{\n\t\"ID\": \"461145\",\n\t\"NAME\": \"John\",\n\t\"LAST_NAME\": \"Smith\",\n\t\"EMAIL\": \"jsmith@vistaprint.com\",\n\t\"JOB_TITLE\": \"Electrical Engineer\",\n\t\"CREDITCARDNUMBER\": \"4343354898-76-9480\",\n\t\"COMPANY\": \"Zoonder\",\n\t\"CITY\": \"San Francisco\",\n\t\"STATE\": \"CA\"\n}"
           }
         }
+      }, {
+        "entity" : {
+          "type" : "Request",
+          "id" : "3b17eca9-f3ef-4e06-8c10-7d074361e970",
+          "name" : "Delete a customer",
+          "description" : "Deletes a customer",
+          "uri" : {
+            "host" : "${\"BaseUrl\"}",
+            "path" : "/customers/{id}"
+          },
+          "method" : {
+            "link" : "",
+            "name" : "DELETE"
+          },
+          "headers" : [ ],
+          "headersType" : "Form"
+        }
       } ]
     }, {
       "entity" : {
@@ -124,12 +137,12 @@
     } ]
   } ],
   "environments" : [ {
-    "name" : "Customers API 1.1.0",
+    "name" : "Customers API 2.0.1",
     "importedFrom" : {
-      "projectId" : "68d10d7d-624c-4102-9437-294743aa6384"
+      "projectId" : "85c548fd-562e-4871-bd1f-c606fd92a4d3"
     },
     "variables" : {
-      "f08b6f6d-4ebd-4f88-ae39-98a4ba3d781c" : {
+      "eb3b7770-cc15-4b62-8b92-da55a65bf55a" : {
         "name" : "BaseUrl",
         "value" : "https://example.com",
         "enabled" : true,
