@@ -3,9 +3,9 @@
   "entities" : [ {
     "entity" : {
       "type" : "Project",
-      "name" : "Customers API 1.0.0",
-      "description" : "No description",
-      "importedFrom" : "adaa8151-92f3-4c72-a743-41fe03796614"
+      "name" : "Customers API 1.1.0",
+      "description" : "An API for keeping track of your customers.",
+      "importedFrom" : "68d10d7d-624c-4102-9437-294743aa6384"
     },
     "children" : [ {
       "entity" : {
@@ -20,7 +20,7 @@
       "children" : [ {
         "entity" : {
           "type" : "Request",
-          "id" : "cc7f761d-b8f8-4638-94f2-9c403013c2f9",
+          "id" : "c23c4572-8375-4687-8267-81f9a0631b3d",
           "name" : "Get the list of customers",
           "description" : "Loads the list of customers",
           "uri" : {
@@ -41,9 +41,9 @@
       }, {
         "entity" : {
           "type" : "Request",
-          "id" : "ddd7ba1d-0237-44d5-af3e-9e70c3213cd5",
+          "id" : "06d754ee-5ff7-4109-b621-ba36dab0919f",
           "name" : "Create a customer",
-          "description" : "adds a new customer",
+          "description" : "Adds a new customer",
           "uri" : {
             "host" : "${\"BaseUrl\"}",
             "path" : "/customers"
@@ -71,9 +71,26 @@
       }, {
         "entity" : {
           "type" : "Request",
-          "id" : "9e712673-6c85-4b76-a32b-ff691d96f3e9",
+          "id" : "256fd533-55a8-42ea-9c69-2a62170f57b9",
+          "name" : "Delete a customer",
+          "description" : "Delete a customer",
+          "uri" : {
+            "host" : "${\"BaseUrl\"}",
+            "path" : "/customers/{id}"
+          },
+          "method" : {
+            "link" : "",
+            "name" : "DELETE"
+          },
+          "headers" : [ ],
+          "headersType" : "Form"
+        }
+      }, {
+        "entity" : {
+          "type" : "Request",
+          "id" : "6f84c01b-7cab-4c59-9301-30c669a677dc",
           "name" : "Update a customer",
-          "description" : "Updates a customer",
+          "description" : "Updates a customer.",
           "uri" : {
             "host" : "${\"BaseUrl\"}",
             "path" : "/customers/{id}"
@@ -98,23 +115,6 @@
             "textBody" : "{\n\t\"ID\": \"461145\",\n\t\"NAME\": \"John\",\n\t\"LAST_NAME\": \"Smith\",\n\t\"EMAIL\": \"jsmith@vistaprint.com\",\n\t\"JOB_TITLE\": \"Electrical Engineer\",\n\t\"CREDITCARDNUMBER\": \"4343354898-76-9480\",\n\t\"COMPANY\": \"Zoonder\",\n\t\"CITY\": \"San Francisco\",\n\t\"STATE\": \"CA\"\n}"
           }
         }
-      }, {
-        "entity" : {
-          "type" : "Request",
-          "id" : "dcc4d436-d070-44af-b639-a1efe7d96444",
-          "name" : "Delete a customer",
-          "description" : "Deletes a customer",
-          "uri" : {
-            "host" : "${\"BaseUrl\"}",
-            "path" : "/customers/{id}"
-          },
-          "method" : {
-            "link" : "",
-            "name" : "DELETE"
-          },
-          "headers" : [ ],
-          "headersType" : "Form"
-        }
       } ]
     }, {
       "entity" : {
@@ -124,12 +124,12 @@
     } ]
   } ],
   "environments" : [ {
-    "name" : "Customers API 1.0.0",
+    "name" : "Customers API 1.1.0",
     "importedFrom" : {
-      "projectId" : "adaa8151-92f3-4c72-a743-41fe03796614"
+      "projectId" : "68d10d7d-624c-4102-9437-294743aa6384"
     },
     "variables" : {
-      "e9358f37-a1b7-49c7-85f6-4b5683a275e2" : {
+      "f08b6f6d-4ebd-4f88-ae39-98a4ba3d781c" : {
         "name" : "BaseUrl",
         "value" : "https://example.com",
         "enabled" : true,

@@ -4,6 +4,8 @@
   <url>
     <loc>/apis/customers-api/1.0.0/</loc>
   </url><url>
+    <loc>/apis/customers-api/1.1.0/</loc>
+  </url><url>
     <loc>/apis/</loc>
   </url><url>
     <loc>/categories/</loc>
