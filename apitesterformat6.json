@@ -1,0 +1,153 @@
+{
+  "version" : 6,
+  "entities" : [ {
+    "entity" : {
+      "type" : "Project",
+      "name" : "Customers API 2.0.1",
+      "description" : "No description",
+      "importedFrom" : "85c548fd-562e-4871-bd1f-c606fd92a4d3"
+    },
+    "children" : [ {
+      "entity" : {
+        "type" : "Service",
+        "name" : "Objects"
+      }
+    }, {
+      "entity" : {
+        "type" : "Service",
+        "name" : "Operations"
+      },
+      "children" : [ {
+        "entity" : {
+          "type" : "Request",
+          "id" : "0be53fba-10ff-4b3a-8b42-8f5bebf521fd",
+          "name" : "Get the list of customers",
+          "description" : "Loads the list of customers",
+          "uri" : {
+            "host" : "${\"BaseUrl\"}",
+            "path" : "/customers",
+            "query" : {
+              "delimiter" : "&",
+              "items" : [ {
+                "name" : "start",
+                "value" : "",
+                "enabled" : true
+              }, {
+                "name" : "pageSize",
+                "value" : "",
+                "enabled" : true
+              } ]
+            }
+          },
+          "method" : {
+            "link" : "",
+            "name" : "GET"
+          },
+          "headers" : [ {
+            "enabled" : true,
+            "name" : "Accept",
+            "value" : "application/json"
+          } ],
+          "headersType" : "Form",
+          "uriEditor" : true
+        }
+      }, {
+        "entity" : {
+          "type" : "Request",
+          "id" : "4fd21636-2361-43f1-97d1-ccad80afcc79",
+          "name" : "Create a customer",
+          "description" : "adds a new customer",
+          "uri" : {
+            "host" : "${\"BaseUrl\"}",
+            "path" : "/customers"
+          },
+          "method" : {
+            "link" : "",
+            "name" : "POST",
+            "requestBody" : true
+          },
+          "headers" : [ {
+            "enabled" : true,
+            "name" : "Content-Type",
+            "value" : "application/json"
+          }, {
+            "enabled" : true,
+            "name" : "Accept",
+            "value" : "application/json"
+          } ],
+          "headersType" : "Form",
+          "body" : {
+            "bodyType" : "Text",
+            "textBody" : "{\n\t\"ID\": \"461145\",\n\t\"NAME\": \"John\",\n\t\"LAST_NAME\": \"Smith\",\n\t\"EMAIL\": \"jsmith@vistaprint.com\",\n\t\"JOB_TITLE\": \"Electrical Engineer\",\n\t\"CREDITCARDNUMBER\": \"4343354898-76-9480\",\n\t\"COMPANY\": \"Zoonder\",\n\t\"CITY\": \"San Francisco\",\n\t\"STATE\": \"CA\"\n}"
+          }
+        }
+      }, {
+        "entity" : {
+          "type" : "Request",
+          "id" : "2c51fc4a-9cd7-4ef7-9ee2-d434c9294fda",
+          "name" : "Update a customer",
+          "description" : "Updates a customer",
+          "uri" : {
+            "host" : "${\"BaseUrl\"}",
+            "path" : "/customers/{id}"
+          },
+          "method" : {
+            "link" : "",
+            "name" : "PUT",
+            "requestBody" : true
+          },
+          "headers" : [ {
+            "enabled" : true,
+            "name" : "Content-Type",
+            "value" : "application/json"
+          }, {
+            "enabled" : true,
+            "name" : "Accept",
+            "value" : "application/json"
+          } ],
+          "headersType" : "Form",
+          "body" : {
+            "bodyType" : "Text",
+            "textBody" : "{\n\t\"ID\": \"461145\",\n\t\"NAME\": \"John\",\n\t\"LAST_NAME\": \"Smith\",\n\t\"EMAIL\": \"jsmith@vistaprint.com\",\n\t\"JOB_TITLE\": \"Electrical Engineer\",\n\t\"CREDITCARDNUMBER\": \"4343354898-76-9480\",\n\t\"COMPANY\": \"Zoonder\",\n\t\"CITY\": \"San Francisco\",\n\t\"STATE\": \"CA\"\n}"
+          }
+        }
+      }, {
+        "entity" : {
+          "type" : "Request",
+          "id" : "3b17eca9-f3ef-4e06-8c10-7d074361e970",
+          "name" : "Delete a customer",
+          "description" : "Deletes a customer",
+          "uri" : {
+            "host" : "${\"BaseUrl\"}",
+            "path" : "/customers/{id}"
+          },
+          "method" : {
+            "link" : "",
+            "name" : "DELETE"
+          },
+          "headers" : [ ],
+          "headersType" : "Form"
+        }
+      } ]
+    }, {
+      "entity" : {
+        "type" : "Service",
+        "name" : "About"
+      }
+    } ]
+  } ],
+  "environments" : [ {
+    "name" : "Customers API 2.0.1",
+    "importedFrom" : {
+      "projectId" : "85c548fd-562e-4871-bd1f-c606fd92a4d3"
+    },
+    "variables" : {
+      "1c13a69e-7399-4fa7-984c-2ebbde0d893e" : {
+        "name" : "BaseUrl",
+        "value" : "https://example.com",
+        "enabled" : true,
+        "private" : false
+      }
+    }
+  } ]
+}
